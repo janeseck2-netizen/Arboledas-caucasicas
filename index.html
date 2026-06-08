@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Especialistas en Arboledas Caucásicas en Medellín. Diseño, plantación y asesoría paisajística con exclusivos conjuntos de árboles del Cáucaso para fincas y jardines.">
+    <meta name="keywords" content="arboledas caucásicas, árboles del cáucaso, paisajismo Medellín, diseño de jardines, plantación de árboles, Angela Maria Ocampo Pelaez">
+    <meta name="author" content="Angela Maria Ocampo Pelaez">
+    <title>Arboledas Caucásicas | Conjunto de Árboles en el Cáucaso</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Variables de color y tipografía */
+        :root {
+            --primary-color: #2d6a4f; /* Verde bosque */
+            --primary-hover: #1b4332;
+            --accent-color: #d8f3dc;
+            --text-dark: #212529;
+            --text-light: #6c757d;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Roboto', sans-serif;
+        }
+
+        /* Reset y Estilos Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-family: var(--font-body); color: var(--text-dark); }
+        body { background-color: var(--bg-light); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* Contenedores globales */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 80px 0; }
+        
+        /* Tipografía de títulos */
+        h1, h2, h3 { font-family: var(--font-heading); color: var(--primary-color); }
+        .section-title { font-size: 2.5rem; text-align: center; margin-bottom: 1rem; }
+        .section-subtitle { text-align: center; color: var(--text-light); margin-bottom: 3rem; font-size: 1.1rem; }
+
+        /* Botones */
+        .btn { display: inline-block; background-color: var(--primary-color); color: var(--white); padding: 14px 28px; border-radius: 4px; font-weight: 500; border: none; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s ease; text-align: center; font-size: 1.1rem; }
+        .btn:hover { background-color: var(--primary-hover); transform: translateY(-2px); color: var(--white); }
+        .btn-full { width: 100%; }
+
+        /* Header / Navegación */
+        header { background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; padding: 15px 0; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; font-family: var(--font-heading); color: var(--primary-color); }
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
+        .nav-links a { font-weight: 500; color: var(--text-dark); transition: color 0.3s; }
+        .nav-links a:hover { color: var(--primary-color); }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(27, 67, 50, 0.7), rgba(27, 67, 50, 0.7)), url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80&w=1200') center/cover no-repeat; color: var(--white); text-align: center; padding: 120px 20px; }
+        .hero h1 { color: var(--white); font-size: 3.5rem; margin-bottom: 1.5rem; line-height: 1.2; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+        .hero p { font-size: 1.25rem; max-width: 700px; margin: 0 auto 2.5rem auto; text-shadow: 0 1px 2px rgba(0,0,0,0.3); }
+
+        /* Beneficios y Servicios (Grid) */
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: var(--white); padding: 40px 30px; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s ease; border-bottom: 4px solid var(--accent-color); }
+        .card:hover { transform: translateY(-5px); border-bottom-color: var(--primary-color); }
+        .card-icon { font-size: 3rem; margin-bottom: 1.5rem; display: block; }
+        .card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-dark); }
+        .card p { color: var(--text-light); }
+
+        /* Prueba Social (Transparencia) */
+        .social-proof { background-color: var(--accent-color); padding: 60px 0; text-align: center; }
+        .proof-box { max-width: 800px; margin: 0 auto; background: var(--white); padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .proof-box p { font-size: 1.2rem; font-style: italic; margin-bottom: 1rem; color: var(--text-dark); }
+        .proof-box span { font-weight: 700; color: var(--primary-color); }
+
+        /* Formulario y Contacto */
+        .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; background: var(--white); padding: 50px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .contact-info h3 { font-size: 1.8rem; margin-bottom: 1.5rem; }
+        .info-item { margin-bottom: 1.5rem; display: flex; flex-direction: column; }
+        .info-item strong { color: var(--primary-color); font-size: 1.1rem; margin-bottom: 0.2rem; }
+        
+        .form-group { margin-bottom: 1.5rem; }
+        .form-control { width: 100%; padding: 12px 15px; border: 1px solid #ced4da; border-radius: 4px; font-family: var(--font-body); font-size: 1rem; transition: border-color 0.3s; }
+        .form-control:focus { outline: none; border-color: var(--primary-color); }
+        textarea.form-control { resize: vertical; min-height: 120px; }
+        
+        .checkbox-group { display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: var(--text-light); }
+        .checkbox-group a { color: var(--primary-color); text-decoration: underline; }
+        
+        .form-message { display: none; padding: 15px; border-radius: 4px; margin-top: 15px; text-align: center; font-weight: 500; }
+        .msg-success { background-color: #d1fae5; color: #065f46; display: block; }
+
+        /* Footer */
+        footer { background-color: var(--text-dark); color: #adb5bd; padding: 50px 0 20px 0; text-align: center; }
+        .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap; }
+        .footer-links a { transition: color 0.3s; }
+        .footer-links a:hover { color: var(--white); }
+        .footer-copy { font-size: 0.9rem; border-top: 1px solid #495057; padding-top: 20px; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.5rem; }
+            .contact-wrapper { grid-template-columns: 1fr; padding: 30px; gap: 40px; }
+            section { padding: 60px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">Arboledas Caucásicas</div>
+            <nav class="nav-links">
+                <a href="#beneficios">Beneficios</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#contacto" class="btn" style="color: white;">Solicitar Asesoría</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Conjunto de Árboles en el Cáucaso para tu Espacio</h1>
+                <p>Especialistas en el diseño, adaptación y plantación de majestuosas especies caucásicas. Transforma tu finca o jardín con la elegancia y resistencia de la naturaleza asiático-europea.</p>
+                <a href="#contacto" class="btn">Cotiza tu conjunto de árboles del Cáucaso</a>
+            </div>
+        </section>
+
+        <section id="beneficios" class="container">
+            <h2 class="section-title">¿Por qué elegir especies del Cáucaso?</h2>
+            <p class="section-subtitle">Majestuosidad, resistencia y un diseño paisajístico inigualable</p>
+            <div class="grid-3">
+                <div class="card">
+                    <span class="card-icon">🌲</span>
+                    <h3>Estética Exclusiva</h3>
+                    <p>Las arboledas caucásicas ofrecen un follaje denso y una estructura imponente que eleva el valor visual y comercial de cualquier propiedad.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🛡️</span>
+                    <h3>Alta Resistencia</h3>
+                    <p>Son especies caracterizadas por su longevidad y adaptabilidad, logrando un desarrollo robusto con el cuidado y la aclimatación adecuada.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🍃</span>
+                    <h3>Sostenibilidad</h3>
+                    <p>Creamos ecosistemas equilibrados. Nuestros conjuntos de árboles mejoran la calidad del aire, la sombra y el microclima de tu terreno.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios" style="background-color: var(--white);">
+            <div class="container">
+                <h2 class="section-title">Nuestra Propuesta de Valor</h2>
+                <p class="section-subtitle">Soluciones integrales para proyectos paisajísticos en Medellín y alrededores</p>
+                <div class="grid-3">
+                    <div class="card" style="border-bottom-color: var(--primary-color);">
+                        <h3>Diseño Paisajístico</h3>
+                        <p>Evaluamos tu terreno y diseñamos la distribución perfecta del conjunto de árboles para garantizar estética y viabilidad biológica.</p>
+                    </div>
+                    <div class="card" style="border-bottom-color: var(--primary-color);">
+                        <h3>Suministro y Plantación</h3>
+                        <p>Proveemos especies sanas y nos encargamos de todo el proceso técnico de plantación, asegurando el enraizamiento óptimo.</p>
+                    </div>
+                    <div class="card" style="border-bottom-color: var(--primary-color);">
+                        <h3>Asesoría y Mantenimiento</h3>
+                        <p>Te acompañamos con planes de cuidado, nutrición y poda para que tu arboleda caucásica crezca fuerte y saludable a lo largo de los años.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="social-proof">
+            <div class="container">
+                <div class="proof-box">
+                    <h2 style="margin-bottom: 20px; font-size: 2rem;">Compromiso con la Excelencia</h2>
+                    <p>"Nuestro trabajo se basa en la honestidad botánica y el compromiso paisajístico. Diseñamos entornos naturales que perduran por generaciones, trabajando estrechamente con cada cliente para materializar su visión respetando los ciclos de la naturaleza."</p>
+                    <span>- Angela Maria Ocampo Pelaez, Directora de Proyectos</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Hablemos de tu proyecto</h3>
+                    <p style="margin-bottom: 2rem; color: var(--text-light);">Estamos listos para asesorarte. Contáctanos para evaluar tu espacio y cotizar el diseño de tu conjunto de árboles.</p>
+                    
+                    <div class="info-item">
+                        <strong>Responsable Comercial:</strong>
+                        <span>Angela Maria Ocampo Pelaez</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Dirección:</strong>
+                        <span>70174 Cl 44A, Medellín, Colombia</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Teléfono / WhatsApp:</strong>
+                        <span>3146765334</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Correo electrónico:</strong>
+                        <span>JaneSeck2@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Horario de atención:</strong>
+                        <span>Todos los días de la semana de 8:00 am a 5:00 pm</span>
+                    </div>
+                </div>
+
+                <div class="form-container">
+                    <form id="leadForm">
+                        <div class="form-group">
+                            <input type="text" id="nombre" class="form-control" placeholder="Nombre completo *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" class="form-control" placeholder="Correo electrónico *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="telefono" class="form-control" placeholder="Teléfono de contacto *" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="mensaje" class="form-control" placeholder="Cuéntanos sobre el espacio donde deseas plantar (área, clima aproximado, dudas)..."></textarea>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="privacidad" required style="margin-top: 4px;">
+                            <label for="privacidad">He leído y acepto la <a href="politica-de-privacidad.html" target="_blank">Política de Privacidad</a> y autorizo el tratamiento de mis datos para recibir la cotización.</label>
+                        </div>
+                        <button type="submit" class="btn btn-full" id="submitBtn">Cotiza tu conjunto de árboles del Cáucaso</button>
+                        <div id="formStatus" class="form-message"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="politica-de-privacidad.html">Política de Privacidad</a>
+                <a href="terminos-y-condiciones.html">Términos y Condiciones</a>
+            </div>
+            <div class="footer-copy">
+                &copy; <span id="year"></span> Arboledas Caucásicas. Proyecto gestionado por Angela Maria Ocampo Pelaez. <br>
+                Medellín, Colombia. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            
+            const btn = document.getElementById('submitBtn');
+            const statusDiv = document.getElementById('formStatus');
+            
+            btn.textContent = 'Enviando solicitud...';
+            btn.disabled = true;
+            btn.style.opacity = '0.7';
+
+            // Simulación de envío exitoso para demostrar funcionamiento sin requerir backend inmediato
+            setTimeout(() => {
+                statusDiv.textContent = '¡Gracias por tu interés! Hemos recibido tus datos y nos pondremos en contacto contigo a la brevedad para asesorarte.';
+                statusDiv.className = 'form-message msg-success';
+                this.reset();
+                btn.textContent = 'Cotiza tu conjunto de árboles del Cáucaso';
+                btn.disabled = false;
+                btn.style.opacity = '1';
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
